@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #132043; 
+    --secondary-color: #1F4172;
+    --accent-color: #F1B4BB;
+    --background-color: #FDF0F0; 
+    --text-color: #132043; 
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .nav-wrapper {
+    background-color: var(--primary-color);
+  }
+  
+  .brand-logo {
+    color: var(--background-color) !important;
+  }
+  
+  .nav-wrapper ul li a {
+    color: var(--background-color) !important;
+  }
+  
+  .btn {
+    background-color: var(--secondary-color);
+  }
+  
+  .btn:hover {
+    background-color: var(--accent-color);
+  }
+  
+  .hero {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    color: var(--background-color);
+  }
+  
+  .hero p {
+    color: var(--background-color);
+  }
+  
+  .hero .btn {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+  }
+  

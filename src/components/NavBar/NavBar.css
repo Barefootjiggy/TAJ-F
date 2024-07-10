@@ -1,0 +1,99 @@
+@keyframes colorCycle1 {
+    0%, 100% { color: #132043; }
+    25% { color: #1F4172; }
+    50% { color: #F1B4BB; }
+    75% { color: #FDF0F0; }
+  }
+  
+  @keyframes colorCycle2 {
+    0%, 100% { color: #1F4172; }
+    25% { color: #F1B4BB; }
+    50% { color: #FDF0F0; }
+    75% { color: #132043; }
+  }
+  
+  @keyframes colorCycle3 {
+    0%, 100% { color: #F1B4BB; }
+    25% { color: #FDF0F0; }
+    50% { color: #132043; }
+    75% { color: #1F4172; }
+  }
+  
+  @keyframes colorCycle4 {
+    0%, 100% { color: #FDF0F0; }
+    25% { color: #132043; }
+    50% { color: #1F4172; }
+    75% { color: #F1B4BB; }
+  }
+  
+  .word-0 {
+    animation: colorCycle1 4s infinite;
+  }
+  
+  .word-1 {
+    animation: colorCycle2 4s infinite;
+  }
+  
+  .word-2 {
+    animation: colorCycle3 4s infinite;
+  }
+  
+  .word-3 {
+    animation: colorCycle4 4s infinite;
+  }
+  
+  .nav-wrapper {
+    background-color: #132043; /* Dark blue */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px 80px 240px; /* Adjust padding to balance the spacing */
+    position: relative;
+    height: 150px; /* Adjust this value to ensure the height covers the logo */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .left-links, .right-links {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Allow these sections to take equal space */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+.right-links {
+    justify-content: flex-end; /* Align items to the end */
+}
+  
+  .nav-links li {
+    margin: 0 15px; /* Adjust the margin to space out the links */
+  }
+  
+  .nav-links a {
+    color: #FDF0F0; /* Very light pink */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px; /* Adjust padding to balance the spacing */
+  }
+  
+  .nav-links a:hover {
+    color: #F1B4BB; /* Light pink */
+  }
+  
+  .brand-logo {
+    font-size: 1.5em;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Increase space between icons and text */
+    padding: 0 50px; /* Add padding to create more space around the logo */
+  }
+  

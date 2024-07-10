@@ -1,12 +1,18 @@
 import React from 'react';
+import './Home.css';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <div className="hero">
-        <h1>Welcome to Amanda Jane's Personal Training</h1>
-        <p>Your journey to a healthier life starts here.</p>
-        <a className="btn" href="/services">Explore Services</a>
+    <div className="hero-section">
+      <div className="container">
+        <h1 className="title">The Athletic Performer</h1>
+        <h2 className="subtitle">Actors Are Athletes! Train like one!</h2>
+        <p className="description">
+          Helping actors, artists, and dancers reach their full potential in their craft by treating them as the athletes that they are!
+        </p>
+        <p className="description">
+          All professional athletes train their off-season in the gym to optimize their performance on the field. We should too!
+        </p>
       </div>
     </div>
   );
