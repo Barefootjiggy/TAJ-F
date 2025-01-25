@@ -47,10 +47,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 100px 80px 240px; /* Adjust padding to balance the spacing */
+    padding: 80px 100px 80px 40px; /* Adjust padding to balance the spacing */
     position: relative;
     height: 150px; /* Adjust this value to ensure the height covers the logo */
   }
+
+  .left-side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
   
   .nav-links {
     display: flex;

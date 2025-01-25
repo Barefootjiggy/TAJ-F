@@ -11,6 +11,7 @@ const NavBar: React.FC = () => {
 
   return (
     <nav className="nav-wrapper">
+      
       <ul className="nav-links left-links">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
