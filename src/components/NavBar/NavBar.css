@@ -143,6 +143,17 @@
   /* When menu is open, display the links */
   .nav-links.open {
     display: flex;
+    background-color: #F1B4BB; /* Dropdown background color */
+  }
+
+  /* Dropdown links styles */
+  .nav-links.open li a {
+    color: #132043 !important; /* Font color for dropdown */
+  }
+
+    /* Optionally, change hover color for dropdown links */
+  .nav-links.open li a:hover {
+    opacity: 0.8;
   }
 
   /* Optionally adjust the nav-wrapper padding on small screens */
