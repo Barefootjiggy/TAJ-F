@@ -1,111 +1,152 @@
+/* Color Animations (unchanged) */
 @keyframes colorCycle1 {
-    0%, 100% { color: #132043; }
-    25% { color: #1F4172; }
-    50% { color: #F1B4BB; }
-    75% { color: #FDF0F0; }
-  }
-  
-  @keyframes colorCycle2 {
-    0%, 100% { color: #1F4172; }
-    25% { color: #F1B4BB; }
-    50% { color: #FDF0F0; }
-    75% { color: #132043; }
-  }
-  
-  @keyframes colorCycle3 {
-    0%, 100% { color: #F1B4BB; }
-    25% { color: #FDF0F0; }
-    50% { color: #132043; }
-    75% { color: #1F4172; }
-  }
-  
-  @keyframes colorCycle4 {
-    0%, 100% { color: #FDF0F0; }
-    25% { color: #132043; }
-    50% { color: #1F4172; }
-    75% { color: #F1B4BB; }
-  }
-  
-  .word-0 {
-    animation: colorCycle1 4s infinite;
-  }
-  
-  .word-1 {
-    animation: colorCycle2 4s infinite;
-  }
-  
-  .word-2 {
-    animation: colorCycle3 4s infinite;
-  }
-  
-  .word-3 {
-    animation: colorCycle4 4s infinite;
-  }
-  
-  .nav-wrapper {
-    background-color: #132043; /* Dark blue */
+  0%, 100% { color: #132043; }
+  25% { color: #1F4172; }
+  50% { color: #F1B4BB; }
+  75% { color: #FDF0F0; }
+}
+
+@keyframes colorCycle2 {
+  0%, 100% { color: #1F4172; }
+  25% { color: #F1B4BB; }
+  50% { color: #FDF0F0; }
+  75% { color: #132043; }
+}
+
+@keyframes colorCycle3 {
+  0%, 100% { color: #F1B4BB; }
+  25% { color: #FDF0F0; }
+  50% { color: #132043; }
+  75% { color: #1F4172; }
+}
+
+@keyframes colorCycle4 {
+  0%, 100% { color: #FDF0F0; }
+  25% { color: #132043; }
+  50% { color: #1F4172; }
+  75% { color: #F1B4BB; }
+}
+
+.word-0 {
+  animation: colorCycle1 4s infinite;
+}
+
+.word-1 {
+  animation: colorCycle2 4s infinite;
+}
+
+.word-2 {
+  animation: colorCycle3 4s infinite;
+}
+
+.word-3 {
+  animation: colorCycle4 4s infinite;
+}
+
+/* NavBar Base Styling */
+.nav-wrapper {
+  background-color: #132043; /* Dark blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px; /* Adjust as needed */
+  height: 60px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Left and Right Containers */
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Space between the logo and menu-button on the left */
+.nav-left {
+  gap: 20px;
+}
+
+/* Brand Logo (Logo words) */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Nav Links Styling */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: #FDF0F0; /* Light pink */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.nav-links a:hover {
+  color: #F1B4BB; /* Lighter pink on hover */
+}
+
+/* Hamburger Menu Button */
+/* Hidden on larger screens */
+.menu-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #FDF0F0;
+  margin: 3px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+  /* Show the menu button on small screens */
+  .menu-button {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 100px 80px 40px; /* Adjust padding to balance the spacing */
-    position: relative;
-    height: 150px; /* Adjust this value to ensure the height covers the logo */
   }
 
-  .left-side {
-    display: flex;
+  /* Optionally adjust the logo placement (e.g. center it) if desired */
+  /* For example, you could add: 
+  .brand-logo {
+    margin: 0 auto;
+  } 
+  */
+
+  /* Hide the nav-links by default on small screens */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px; /* Position below the navbar */
+    left: 0;
+    right: 0;
+    background-color: #132043;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
-}
+    padding: 10px 0;
+  }
 
-.social-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-  
-  .nav-links {
+  /* When menu is open, display the links */
+  .nav-links.open {
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
-  
-  .left-links, .right-links {
-    display: flex;
-    align-items: center;
-    flex: 1; /* Allow these sections to take equal space */
-    justify-content: flex-start; /* Align items to the start */
-}
 
-.right-links {
-    justify-content: flex-end; /* Align items to the end */
+  /* Optionally adjust the nav-wrapper padding on small screens */
+  .nav-wrapper {
+    padding: 10px 20px;
+  }
 }
-  
-  .nav-links li {
-    margin: 0 15px; /* Adjust the margin to space out the links */
-  }
-  
-  .nav-links a {
-    color: #FDF0F0; /* Very light pink */
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px; /* Adjust padding to balance the spacing */
-  }
-  
-  .nav-links a:hover {
-    color: #F1B4BB; /* Light pink */
-  }
-  
-  .brand-logo {
-    font-size: 1.5em;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Increase space between icons and text */
-    padding: 0 50px; /* Add padding to create more space around the logo */
-  }
-  

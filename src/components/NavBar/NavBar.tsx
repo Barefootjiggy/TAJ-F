@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './NavBar.css';
 
 const NavBar: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   const logoWords = [
     { word: "Train", color: "#132043" },
     { word: "with", color: "#1F4172" },
@@ -11,32 +17,33 @@ const NavBar: React.FC = () => {
 
   return (
     <nav className="nav-wrapper">
-      
-      <ul className="nav-links left-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <img src="/logo32bgrm.png" alt="logo" className="logo-icon left-logo" />
-      </ul>
-      <div className="brand-logo">
-        
-        <div className="logo-words">
-          {logoWords.map((entry, wordIndex) => (
-            <span key={wordIndex} className={`logo-word word-${wordIndex}`}>
+      <div className="nav-left">
+        {/* Hamburger Menu (visible on small screens) */}
+        <div className="menu-button" onClick={toggleMenu}>
+          <div className="menu-bar"></div>
+          <div className="menu-bar"></div>
+          <div className="menu-bar"></div>
+        </div>
+
+        {/* Logo (always visible on large screens; can adjust for small screens if desired) */}
+        <div className="brand-logo">
+          {logoWords.map((entry, idx) => (
+            <span key={idx} className={`logo-word word-${idx}`}>
               {entry.word}
             </span>
           ))}
         </div>
-        
       </div>
-      <ul className="nav-links right-links">
-      <img src="/logo32bgrm.png" alt="logo" className="logo-icon right-logo" />
-        <li><a href="/services">Services</a></li>
-        <li><a href="/testimonials">Testimonials</a></li>
-        <li><a href="/contact">Contact Me!</a></li>
-      </ul>
+
+      <div className="nav-right">
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact Me!</a></li>
+        </ul>
+      </div>
     </nav>
   );
-}
+};
 
 export default NavBar;
