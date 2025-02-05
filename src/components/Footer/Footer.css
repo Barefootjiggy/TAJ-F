@@ -102,3 +102,13 @@
   text-transform: uppercase;
   margin-top: 30px;
 }
+
+/* Ensures the link inside .footer-brand keeps the original color */
+.footer-brand a {
+  text-decoration: none;
+  color: #132043 !important; /* Forces the original color */
+}
+
+.footer-brand a:hover {
+  color: #029be5 !important; /* Hover color */
+}

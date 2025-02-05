@@ -42,8 +42,12 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        {/* Footer Branding */}
-        <h2 className="footer-brand">FOREVER FITNESS</h2>
+        {/* Clickable Link to Mobile App */}
+        <h2 className="footer-brand">
+          <a href="http://onelink.to/broadwayeverybody" target="_blank" rel="noopener noreferrer">
+            FOREVER FITNESS
+          </a>
+        </h2>
       </div>
     </footer>
   );
