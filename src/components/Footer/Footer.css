@@ -28,7 +28,7 @@
 }
 
 .contact-button:hover {
-  background-color: #1F4172;
+  background-color: #029be5;
   color: #FDF0F0;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .subscribe-button {
-  background-color: #1F4172;
+  background-color: #132043;
   color: #FDF0F0;
   border: none;
   padding: 10px 20px;
@@ -68,7 +68,7 @@
 }
 
 .subscribe-button:hover {
-  background-color: #132043;
+  background-color: #029be5;
 }
 
 .privacy-text {
@@ -91,24 +91,25 @@
 }
 
 .social-icons a:hover {
-  color: #1F4172; /* Color change on hover */
+  color: #029be5; /* Color change on hover */
 }
 
 /* Footer Branding */
 .footer-brand {
-  font-size: 24px;
+  font-size: clamp(24px, 8vw, 120px); /* Scales dynamically with screen width */
   font-weight: bold;
   color: #132043;
-  text-transform: uppercase;
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Ensures the link inside .footer-brand keeps the original color */
 .footer-brand a {
   text-decoration: none;
-  color: #132043 !important; /* Forces the original color */
+  color: #132043 !important; /* Keeps the original color */
 }
 
 .footer-brand a:hover {
   color: #029be5 !important; /* Hover color */
 }
+
