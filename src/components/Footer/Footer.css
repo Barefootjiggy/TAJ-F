@@ -1,31 +1,104 @@
 .footer-wrapper {
-    background-color: #F1B4BB; 
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer-links {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 80%;
-    justify-content: space-between; 
-  }
-  
-  .footer-links li {
-    margin: 0 10px; 
-  }
-  
-  .footer-links a {
-    color: #132043; 
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline; 
-  }
-  
+  background-color: #FDF0F0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Contact Button */
+.contact-button {
+  border: 2px solid #132043;
+  color: #F1B4BB;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-button:hover {
+  background-color: #1F4172;
+  color: #FDF0F0;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+  margin: 30px 0;
+}
+
+.subscribe-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.subscribe-input {
+  padding: 10px;
+  border: 1px solid #132043;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.subscribe-button {
+  background-color: #1F4172;
+  color: #FDF0F0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background-color: #132043;
+}
+
+.privacy-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #132043; /* Default icon color */
+  font-size: 30px; /* Icon size */
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #1F4172; /* Color change on hover */
+}
+
+/* Footer Branding */
+.footer-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #132043;
+  text-transform: uppercase;
+  margin-top: 30px;
+}

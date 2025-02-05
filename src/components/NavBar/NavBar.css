@@ -113,7 +113,7 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 868px) {
   /* Show the menu button on small screens */
   .menu-button {
     display: flex;
