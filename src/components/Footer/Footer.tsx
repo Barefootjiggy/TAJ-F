@@ -19,15 +19,29 @@ const Footer: React.FC = () => {
         )}
 
         {/* Subscription Section */}
-        <div className="subscribe-section">
-          <h2 className="subscribe-title">SUBSCRIBE</h2>
-          <p>Sign up with your email address to receive news and updates.</p>
-          <div className="subscribe-form">
-            <input type="email" placeholder="Email Address" className="subscribe-input" />
-            <button className="subscribe-button">SIGN UP</button>
-          </div>
-          <p className="privacy-text">We respect your privacy.</p>
-        </div>
+<div className="subscribe-section">
+  <h2 className="subscribe-title">SUBSCRIBE</h2>
+  <p>Sign up with your email address to receive news and updates.</p>
+
+  {/* Mailchimp Subscription Form */}
+  <form
+    action="https://amandajanesnyder.us16.list-manage.com/subscribe/post?u=4d650d8819062416a7a7a2c5f&id=ee939cda45&f_id=00c20ce0f0"
+    method="post"
+    target="_blank"
+    className="subscribe-form"
+  >
+    <input 
+      type="email" 
+      name="EMAIL" 
+      placeholder="Email Address" 
+      className="subscribe-input"
+      required 
+    />
+    <button type="submit" className="subscribe-button">SIGN UP</button>
+  </form>
+
+  <p className="privacy-text">We respect your privacy.</p>
+</div>
 
         {/* Social Media Links using FontAwesome */}
         <div className="social-icons">
