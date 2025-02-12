@@ -1,11 +1,11 @@
 /* src/Home.css */
 
 .hero-section {
-  background-image: url('../../../public/AmandaSmiling.jpg'); /* ✅ Correct path for images in public/ */
+  background-image: url('../../../public/AmandaDancepose.jpg'); /* ✅ Correct path for images in public/ */
   background-size: cover;
-  background-position: center;
+  background-position: top-center;
   background-repeat: no-repeat;
-  height: 200vh; /* Full viewport height */
+  height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
 .container {
   max-width: 800px;
   margin: 0 auto;
-  position: relative;
+  position: bottom;
   z-index: 2; /* Ensures text is above the background overlay */
   background: rgba(255, 255, 255, 0.6); /* Light background for readability */
   padding: 20px;
