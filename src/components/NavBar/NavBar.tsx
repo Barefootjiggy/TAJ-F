@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // ✅ Import Link from react-router-dom
 import './NavBar.css';
 
 const NavBar: React.FC = () => {
@@ -25,21 +26,21 @@ const NavBar: React.FC = () => {
           <div className="menu-bar"></div>
         </div>
 
-        {/* Logo (always visible on large screens; can adjust for small screens if desired) */}
-        <div className="brand-logo">
+        {/* Logo wrapped in a Link component */}
+        <Link to="/" className="brand-logo">
           {logoWords.map((entry, idx) => (
             <span key={idx} className={`logo-word word-${idx}`}>
               {entry.word}
             </span>
           ))}
-        </div>
+        </Link>
       </div>
 
       <div className="nav-right">
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
     </nav>
