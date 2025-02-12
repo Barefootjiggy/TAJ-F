@@ -1,31 +1,43 @@
 /* src/Home.css */
 
 .hero-section {
-    background-color: #FDF0F0; /* Very light pink */
-    color: #132043; /* Dark blue for text */
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .title {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .subtitle {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-  }
-  
+  background-image: url('../../../public/AmandaSmiling.jpg'); /* ✅ Correct path for images in public/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; /* Ensures text is above the background overlay */
+  background: rgba(255, 255, 255, 0.6); /* Light background for readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
