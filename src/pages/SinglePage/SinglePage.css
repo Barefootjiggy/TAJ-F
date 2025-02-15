@@ -1,0 +1,23 @@
+.section {
+    height: 100vh; /* Each section takes full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .home {
+    background-color: #132043;
+    color: #FDF0F0;
+  }
+  
+  .about {
+    background-color: #1F4172;
+    color: #FDF0F0;
+  }
+  
+  .contact {
+    background-color: #F1B4BB;
+    color: #132043;
+  }
+  

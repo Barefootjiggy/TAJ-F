@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // ✅ Import Link from react-router-dom
-import './NavBar.css';
+import React, { useState } from "react";
+import "./NavBar.css";
 
 const NavBar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false); // Close menu after clicking on mobile
   };
 
   const logoWords = [
@@ -26,21 +30,21 @@ const NavBar: React.FC = () => {
           <div className="menu-bar"></div>
         </div>
 
-        {/* Logo wrapped in a Link component */}
-        <Link to="/" className="brand-logo">
+        {/* Logo with a scroll-to-top function */}
+        <div className="brand-logo" onClick={() => scrollToSection("home")} style={{ cursor: "pointer" }}>
           {logoWords.map((entry, idx) => (
             <span key={idx} className={`logo-word word-${idx}`}>
               {entry.word}
             </span>
           ))}
-        </Link>
+        </div>
       </div>
 
       <div className="nav-right">
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><button onClick={() => scrollToSection("home")}>Home</button></li>
+          <li><button onClick={() => scrollToSection("about")}>About</button></li>
+          <li><button onClick={() => scrollToSection("contact")}>Contact</button></li>
         </ul>
       </div>
     </nav>
