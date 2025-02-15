@@ -1,5 +1,6 @@
-import React from 'react';
-import './Home.css';
+import React from "react";
+// import TypingText from "../../components/TypingText/TypingText"; 
+import "./Home.css";
 
 const Home: React.FC = () => {
   return (
@@ -7,6 +8,14 @@ const Home: React.FC = () => {
       <div className="container">
         <h1 className="title">The Athletic Performer</h1>
         <h2 className="subtitle">Actors Are Athletes! Train like one!</h2>
+        
+        {/* Typewriter effect */}
+        {/* <TypingText textArray={[
+          "Actors Are Athletes!",
+          "Train Like a Performer!",
+          "Unlock Your Full Potential!"
+        ]} /> */}
+
         <p className="description">
           Helping actors, artists, and dancers reach their full potential in their craft by treating them as the athletes that they are!
         </p>

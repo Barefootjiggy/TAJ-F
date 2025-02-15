@@ -45,6 +45,7 @@
 
 /* NavBar Base Styling */
 .nav-wrapper {
+  position: fixed;
   background-color: #132043; /* Dark blue */
   top: 0;
   width: 100%;
