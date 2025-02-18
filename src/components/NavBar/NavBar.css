@@ -1,60 +1,23 @@
-/* Color Animations (unchanged) */
-@keyframes colorCycle1 {
-  0%, 100% { color: #132043; }
-  25% { color: #1F4172; }
-  50% { color: #F1B4BB; }
-  75% { color: #FDF0F0; }
-}
-
-@keyframes colorCycle2 {
-  0%, 100% { color: #1F4172; }
-  25% { color: #F1B4BB; }
-  50% { color: #FDF0F0; }
-  75% { color: #132043; }
-}
-
-@keyframes colorCycle3 {
-  0%, 100% { color: #F1B4BB; }
-  25% { color: #FDF0F0; }
-  50% { color: #132043; }
-  75% { color: #1F4172; }
-}
-
-@keyframes colorCycle4 {
-  0%, 100% { color: #FDF0F0; }
-  25% { color: #132043; }
-  50% { color: #1F4172; }
-  75% { color: #F1B4BB; }
-}
-
-.word-0 {
-  animation: colorCycle1 4s infinite;
-}
-
-.word-1 {
-  animation: colorCycle2 4s infinite;
-}
-
-.word-2 {
-  animation: colorCycle3 4s infinite;
-}
-
-.word-3 {
-  animation: colorCycle4 4s infinite;
-}
-
 /* NavBar Base Styling */
 .nav-wrapper {
   position: fixed;
-  background-color: #132043; /* Dark blue */
-  top: 0;
+  background: none; /* Dark blue */
   width: 100%;
   z-index: 100;
-  opacity: 0;
-  transform: translateY(-20px);
+  opacity: 1;
   animation: fadeInDown 1.5s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers everything */
+  height: auto; /* Allows height to adjust based on content */
+  min-height: 80px; /* Ensures a minimum height 
+  */
+  box-shadow: none !important;
+  border-bottom: none;
 }
 
+/* Animation */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -66,9 +29,30 @@
   }
 }
 
-/* Brand Logo (Logo words) */
-.brand-logo {
+/* Logo Container */
+.logo-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  width: 100%;
+}
+
+/* Logo Image */
+.logo-container img {
+  width: 150px; /* Default size */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .logo-container img {
+    width: 125px; /* Reduce logo size for tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-container img {
+    width: 100px; /* Reduce logo size for mobile */
+  }
 }

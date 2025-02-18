@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <div className="about-section">
       <h1>About Amanda Jane</h1>
       <p>Details about Amanda's background, experience, and training philosophy.</p>
-      <img src="/AmandaPushup.jpg" alt="Amanda doing a pushup" className="about-image" /> {/* ✅ Uses image from public/ */}
+      <img src="/AmandaSmiling.jpg" alt="Amanda doing a pushup" className="about-image" /> {/* ✅ Uses image from public/ */}
     </div>
   );
 }

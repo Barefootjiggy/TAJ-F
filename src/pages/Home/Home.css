@@ -1,7 +1,7 @@
 /* src/Home.css */
 
 .hero-section {
-  background-image: url('../../../public/AmandaDancepose.jpg'); /* ✅ Correct path for images in public/ */
+  background-image: url('../../../public/AmandaPushuplook.jpg'); /* ✅ Correct path for images in public/ */
   background-size: cover;
   background-position: top-center;
   background-repeat: no-repeat;
