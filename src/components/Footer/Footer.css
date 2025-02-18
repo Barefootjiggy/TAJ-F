@@ -28,7 +28,7 @@
 }
 
 .contact-button:hover {
-  background-color: #029be5;
+  background-color: #9fdd39;
   color: #FDF0F0;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .subscribe-button:hover {
-  background-color: #029be5;
+  background-color: #9fdd39;
 }
 
 .privacy-text {
@@ -91,7 +91,7 @@
 }
 
 .social-icons a:hover {
-  color: #029be5; /* Color change on hover */
+  color: #9fdd39; /* Color change on hover */
 }
 
 /* Footer Branding */
@@ -110,6 +110,6 @@
 }
 
 .footer-brand a:hover {
-  color: #029be5 !important; /* Hover color */
+  color: #9fdd39 !important; /* Hover color */
 }
 
