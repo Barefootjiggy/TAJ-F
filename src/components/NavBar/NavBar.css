@@ -1,11 +1,10 @@
 /* NavBar Base Styling */
 .nav-wrapper {
   position: fixed;
-  background: none; /* Dark blue */
+  background: none; 
   width: 100%;
   z-index: 100;
   opacity: 1;
-  animation: fadeInDown 1.5s ease-out forwards;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,15 +43,33 @@
   max-width: 100%;
 }
 
+/* Typewriter Effect */
+.typewriter {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #F1B4BB; /* Adjust to match your branding */
+  margin-top: 0px;
+  min-height: 24px; /* Prevent jumping effect */
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
   .logo-container img {
     width: 125px; /* Reduce logo size for tablets */
+  }
+  .typewriter {
+    font-size: 1.3rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .logo-container img {
     width: 100px; /* Reduce logo size for mobile */
+  }
+  .typewriter {
+    font-size: 1.1rem;
   }
 }
