@@ -85,18 +85,18 @@
 }
 
 .social-icons a {
-  color: #132043; /* Default icon color */
-  font-size: 30px; /* Icon size */
+  color: #132043; 
+  font-size: 30px; 
   transition: color 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-  color: #9fdd39; /* Color change on hover */
+  color: #9fdd39; 
 }
 
 /* Footer Branding */
 .footer-brand {
-  font-size: clamp(24px, 8vw, 120px); /* Scales dynamically with screen width */
+  font-size: clamp(24px, 8vw, 120px); 
   font-weight: bold;
   color: #132043;
   display: flex;
@@ -106,10 +106,10 @@
 /* Ensures the link inside .footer-brand keeps the original color */
 .footer-brand a {
   text-decoration: none;
-  color: #132043 !important; /* Keeps the original color */
+  color: #132043 !important; 
 }
 
 .footer-brand a:hover {
-  color: #9fdd39 !important; /* Hover color */
+  color: #9fdd39 !important; 
 }
 

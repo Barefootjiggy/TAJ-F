@@ -3,7 +3,7 @@
   position: fixed;
   background: none; 
   width: 100%;
-  z-index: 100;
+  z-index: 2;
   opacity: 1;
   display: flex;
   flex-direction: column;
@@ -42,33 +42,15 @@
   max-width: 100%;
 }
 
-/* Typewriter Effect */
-.typewriter {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #F1B4BB; 
-  margin-top: 0px;
-  min-height: 24px; 
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: center;
-}
-
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
   .logo-container img {
     width: 125px; 
-  }
-  .typewriter {
-    font-size: 1.3rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .logo-container img {
     width: 100px; 
-  }
-  .typewriter {
-    font-size: 1.1rem;
   }
 }

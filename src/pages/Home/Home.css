@@ -1,11 +1,41 @@
-/* src/Home.css */
+.typewriter-container {
+  position: absolute;
+  top: 20vh; 
+  width: 100%;
+  text-align: center;
+  z-index: 3; 
+}
+
+.typewriter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #F1B4BB; 
+  margin-top: 10px;
+  min-height: 24px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .typewriter {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .typewriter {
+    font-size: 1.1rem;
+  }
+}
 
 .hero-section {
-  background-image: url('../../../public/AmandaPushuplook.jpg'); /* ✅ Correct path for images in public/ */
+  background-image: url('../../../public/AmandaPushuplook.jpg'); 
   background-size: cover;
   background-position: top-center;
   background-repeat: no-repeat;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,8 +47,8 @@
   max-width: 800px;
   margin: 0 auto;
   position: bottom;
-  z-index: 2; /* Ensures text is above the background overlay */
-  background: rgba(255, 255, 255, 0.6); /* Light background for readability */
+  z-index: 2; 
+  background: rgba(255, 255, 255, 0.6); 
   padding: 20px;
   border-radius: 10px;
 }
@@ -39,10 +69,3 @@
   font-size: 1.2em;
   margin-bottom: 20px;
 }
-
-/* .typing-text {
-  font-size: 2em;
-  font-weight: bold;
-  color: #1F4172; 
-  margin-bottom: 20px;
-} */

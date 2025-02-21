@@ -11,7 +11,6 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer-wrapper">
       <div className="footer-content">
-        {/* Show Contact Button Only on Home Page */}
         {location.pathname === '/' && (
           <button className="contact-button" onClick={() => navigate('/contact')}>
             CONTACT
