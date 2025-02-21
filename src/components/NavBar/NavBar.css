@@ -8,10 +8,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centers everything */
-  height: auto; /* Allows height to adjust based on content */
-  min-height: 80px; /* Ensures a minimum height 
-  */
+  justify-content: center; 
+  height: auto; 
   box-shadow: none !important;
   border-bottom: none;
 }
@@ -30,6 +28,7 @@
 
 /* Logo Container */
 .logo-container {
+  padding-top: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,8 +37,8 @@
 
 /* Logo Image */
 .logo-container img {
-  width: 150px; /* Default size */
-  height: auto; /* Maintain aspect ratio */
+  width: 150px; 
+  height: auto; 
   max-width: 100%;
 }
 
@@ -47,9 +46,9 @@
 .typewriter {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #F1B4BB; /* Adjust to match your branding */
+  color: #F1B4BB; 
   margin-top: 0px;
-  min-height: 24px; /* Prevent jumping effect */
+  min-height: 24px; 
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
@@ -58,7 +57,7 @@
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
   .logo-container img {
-    width: 125px; /* Reduce logo size for tablets */
+    width: 125px; 
   }
   .typewriter {
     font-size: 1.3rem;
@@ -67,7 +66,7 @@
 
 @media screen and (max-width: 480px) {
   .logo-container img {
-    width: 100px; /* Reduce logo size for mobile */
+    width: 100px; 
   }
   .typewriter {
     font-size: 1.1rem;

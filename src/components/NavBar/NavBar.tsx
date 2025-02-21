@@ -12,8 +12,8 @@ const Typewriter = () => {
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const typingSpeed = isDeleting ? 50 : 100;
-  const delay = isDeleting ? 500 : 2000;
+  const typingSpeed = isDeleting ? 40 : 80;
+  const delay = isDeleting ? 500 : 1000;
 
   useEffect(() => {
     const handleTyping = () => {
