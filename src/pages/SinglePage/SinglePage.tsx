@@ -1,7 +1,6 @@
 import React from "react";
 import Home from "../Home/Home";
 import About from "../About/About";
-import Contact from "../Contact/Contact";
 import Section from "../../components/FadeSection/FadeSection";
 import Footer from "../../components/Footer/Footer"
 
@@ -15,9 +14,6 @@ const SinglePage: React.FC = () => {
       </Section>
       <Section id="about">
         <About />
-      </Section>
-      <Section id="contact">
-        <Contact />
       </Section>
       <Section id="footer">
         <Footer />
