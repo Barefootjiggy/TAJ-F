@@ -136,7 +136,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #1F4172;
+  background-image: url('../../../public/DumbellsWallBalls.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +163,7 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: .5;  /* Adjust for readability */
+  opacity: 1;  /* Adjust for readability */
 }
 
 /* Modal Inner Content */
@@ -169,7 +171,7 @@
   position: relative;
   z-index: 1;
   padding: 20px 30px;
-  color: #fff;  /* Ensure text is readable */
+  color: #FDF0F0;  /* Ensure text is readable */
 }
 
 /* Close Button */
@@ -189,7 +191,7 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 3px;
 }
 
@@ -200,7 +202,7 @@
 
 .modal-form button {
   background-color: #132043;
-  color: #fff;
+  color: #FDF0F0;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
