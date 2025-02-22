@@ -143,14 +143,33 @@
   z-index: 1000;
 }
 
-/* Modal Content */
+/* Modal Content Container */
 .modal-content {
-  background: #fff;
-  padding: 20px 30px;
+  position: relative;
   border-radius: 5px;
+  overflow: hidden;
   max-width: 500px;
   width: 90%;
+}
+
+/* Background Image Style */
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5;  /* Adjust for readability */
+}
+
+/* Modal Inner Content */
+.modal-inner {
   position: relative;
+  z-index: 1;
+  padding: 20px 30px;
+  color: #fff;  /* Ensure text is readable */
 }
 
 /* Close Button */

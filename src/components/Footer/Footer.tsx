@@ -85,18 +85,22 @@ const Footer: React.FC = () => {
 
       {/* Modal Contact Form */}
       {showModal && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal}>&times;</button>
-            <h2>Contact Us</h2>
-            <form className="modal-form">
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <textarea name="message" placeholder="Your Message" required></textarea>
-              <button type="submit">Send</button>
-            </form>
-          </div>
-        </div>
+       <div className="modal-overlay" onClick={closeModal}>
+       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+         {/* Background image inserted as an <img> element */}
+         <img src="/AmandaPose.jpg" alt="Amanda posing" className="modal-bg" />
+         <div className="modal-inner">
+           <button className="modal-close" onClick={closeModal}>&times;</button>
+           <h2>Contact Us</h2>
+           <form className="modal-form">
+             <input type="text" name="name" placeholder="Your Name" required />
+             <input type="email" name="email" placeholder="Your Email" required />
+             <textarea name="message" placeholder="Your Message" required></textarea>
+             <button type="submit">Send</button>
+           </form>
+         </div>
+       </div>
+     </div>
       )}
     </>
   );
