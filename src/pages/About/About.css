@@ -11,3 +11,19 @@
     margin: 20px auto;
     border-radius: 10px;
 }
+
+@keyframes flash {
+    0% { color: #132043; }
+    50% { color: #F1B4BB; }
+    100% { color: #132043; }
+  }
+  
+  .amanda {
+    animation: flash 2s infinite;
+  }
+  
+  .jane {
+    animation: flash 2s infinite;
+    animation-delay: -1s;
+  }
+  
