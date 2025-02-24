@@ -9,18 +9,15 @@ const Footer: React.FC = () => {
   const [isWaving, setIsWaving] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  // Trigger the wave animation on click
   const handleButtonClick = () => {
     setIsWaving(true);
   };
 
-  // When the wave animation finishes, open the modal
   const handleAnimationEnd = () => {
     setIsWaving(false);
     setShowModal(true);
   };
 
-  // Close the modal
   const closeModal = () => {
     setShowModal(false);
   };
@@ -39,7 +36,6 @@ const Footer: React.FC = () => {
             </button>
           )}
 
-          {/* Subscription Section */}
           <div className="subscribe-section">
             <h2 className="subscribe-title">SUBSCRIBE</h2>
             <p>Sign up with your email address to receive news and updates.</p>
@@ -61,7 +57,6 @@ const Footer: React.FC = () => {
             <p className="privacy-text">We respect your privacy.</p>
           </div>
 
-          {/* Social Media Links */}
           <div className="social-icons">
             <a href="https://www.instagram.com/trainwithamandajane/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} className="icon" />
@@ -74,7 +69,6 @@ const Footer: React.FC = () => {
             </a>
           </div>
 
-          {/* Footer Branding */}
           <h2 className="footer-brand">
             <a href="http://onelink.to/broadwayeverybody" target="_blank" rel="noopener noreferrer">
               FOREVER FITNESS
@@ -83,11 +77,10 @@ const Footer: React.FC = () => {
         </div>
       </footer>
 
-      {/* Modal Contact Form */}
       {showModal && (
        <div className="modal-overlay" onClick={closeModal}>
        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-         {/* Background image inserted as an <img> element */}
+        
          <img src="/AmandaPose.jpg" alt="Amanda posing" className="modal-bg" />
          <div className="modal-inner">
            <button className="modal-close" onClick={closeModal}>&times;</button>
