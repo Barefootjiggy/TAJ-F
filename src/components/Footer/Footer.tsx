@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import confetti from 'canvas-confetti';
 import './Footer.css';
 
 const Footer: React.FC = () => {
   const location = useLocation();
   const [isWaving, setIsWaving] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const popperAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleButtonClick = () => {
     setIsWaving(true);
@@ -21,6 +23,23 @@ const Footer: React.FC = () => {
   const closeModal = () => {
     setShowModal(false);
   };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); 
+  
+    const audio = new Audio(process.env.PUBLIC_URL + '/PartyPopper.wav'); 
+    audio.play();
+  
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  
+    setTimeout(() => {
+      setShowModal(false);
+    }, 2000);
+  };  
 
   return (
     <>
@@ -78,23 +97,24 @@ const Footer: React.FC = () => {
       </footer>
 
       {showModal && (
-       <div className="modal-overlay" onClick={closeModal}>
-       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        
-         <img src="/AmandaPose.jpg" alt="Amanda posing" className="modal-bg" />
-         <div className="modal-inner">
-           <button className="modal-close" onClick={closeModal}>&times;</button>
-           <h2>Contact Us</h2>
-           <form className="modal-form">
-             <input type="text" name="name" placeholder="Your Name" required />
-             <input type="email" name="email" placeholder="Your Email" required />
-             <textarea name="message" placeholder="Your Message" required></textarea>
-             <button type="submit">Send</button>
-           </form>
-         </div>
-       </div>
-     </div>
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src="/AmandaPose.jpg" alt="Amanda posing" className="modal-bg" />
+            <div className="modal-inner">
+              <button className="modal-close" onClick={closeModal}>&times;</button>
+              <h2>Contact Us</h2>
+              <form className="modal-form" onSubmit={handleFormSubmit}>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
       )}
+
+      <audio ref={popperAudioRef} />
     </>
   );
 };
