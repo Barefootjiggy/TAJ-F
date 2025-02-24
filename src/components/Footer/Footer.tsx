@@ -9,6 +9,7 @@ const Footer: React.FC = () => {
   const location = useLocation();
   const [isWaving, setIsWaving] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
   const popperAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleButtonClick = () => {
@@ -39,7 +40,18 @@ const Footer: React.FC = () => {
     setTimeout(() => {
       setShowModal(false);
     }, 2000);
-  };  
+  };
+
+  const handleSubscribeSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  
+    const cheerAudio = new Audio(process.env.PUBLIC_URL + '/Cheering.wav');
+    cheerAudio.play();
+  
+    setIsSubscribed(true);
+  
+    setTimeout(() => setIsSubscribed(false), 3000);
+  };
 
   return (
     <>
@@ -59,9 +71,7 @@ const Footer: React.FC = () => {
             <h2 className="subscribe-title">SUBSCRIBE</h2>
             <p>Sign up with your email address to receive news and updates.</p>
             <form
-              action="https://amandajanesnyder.us16.list-manage.com/subscribe/post?u=4d650d8819062416a7a7a2c5f&id=ee939cda45&f_id=00c20ce0f0"
-              method="post"
-              target="_blank"
+              onSubmit={handleSubscribeSubmit} 
               className="subscribe-form"
             >
               <input 
@@ -73,6 +83,11 @@ const Footer: React.FC = () => {
               />
               <button type="submit" className="subscribe-button">SIGN UP</button>
             </form>
+
+            {isSubscribed && (
+              <div className="subscribe-success">🎉 Thank you for subscribing!</div>
+            )}
+
             <p className="privacy-text">We respect your privacy.</p>
           </div>
 
