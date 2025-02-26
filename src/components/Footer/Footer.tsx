@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
               onClick={handleButtonClick}
               onAnimationEnd={handleAnimationEnd}
             >
-              CONTACT
+              Your Next Step to a Stronger You!
             </button>
           )}
 
@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
             <img src="/AmandaPose.jpg" alt="Amanda posing" className="modal-bg" />
             <div className="modal-inner">
               <button className="modal-close" onClick={closeModal}>&times;</button>
-              <h2>Contact Us</h2>
+              <h4>Let's Chat About Your Goals!</h4>
               <form className="modal-form" onSubmit={handleFormSubmit}>
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
