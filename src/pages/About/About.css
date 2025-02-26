@@ -1,4 +1,6 @@
 .about-container {
+  background: linear-gradient(to right, #fdf0f0, #f1b4bb);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +11,7 @@
 }
 
 .about-image {
-  width: 100%;
+  width: 50%;
   max-width: 400px;
   height: auto;
   border-radius: 10px;
