@@ -18,10 +18,10 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="container">
-        <h1 className="title">The Athletic Performer</h1>
+        <h1 className="title">Forever Fitness</h1>
         <h2 className="subtitle">Actors Are Athletes! Train like one!</h2>
         <p className="description">
-          Helping actors, artists, and dancers reach their full potential in their craft by treating them as the athletes that they are!
+        At ForeverFitness, I help busy professionals break free from the cycle of yo-yo dieting and exercise burnout with science-backed, efficient workouts and sustainable nutrition strategies.
         </p>
         <p className="description">
           All professional athletes train their off-season in the gym to optimize their performance on the field. We should too!
