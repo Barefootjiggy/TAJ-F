@@ -19,7 +19,7 @@ const Home: React.FC = () => {
       </div>
       <div className="container">
         <h1 className="title">Forever Fitness</h1>
-        <h2 className="subtitle">Actors Are Athletes! Train like one!</h2>
+        <h2 className="subtitle">Small Steps, Big Changes, Your Future Self Will Thank You!</h2>
         <p className="description">
         At ForeverFitness, I help busy professionals break free from the cycle of yo-yo dieting and exercise burnout with science-backed, efficient workouts and sustainable nutrition strategies.
         </p>
