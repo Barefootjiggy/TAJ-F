@@ -5,6 +5,7 @@ import Section from "../../components/FadeSection/FadeSection";
 import Footer from "../../components/Footer/Footer"
 
 import "./SinglePage.css";
+import Testimonials from '../Testimonials.tsx/Testimonials'
 
 const SinglePage: React.FC = () => {
   return (
@@ -15,9 +16,13 @@ const SinglePage: React.FC = () => {
       <Section id="about">
         <About />
       </Section>
+      <Section id="testimonials">
+        <Testimonials />
+      </Section>
       <Section id="footer">
         <Footer />
       </Section>
+      
     </div>
   );
 };
