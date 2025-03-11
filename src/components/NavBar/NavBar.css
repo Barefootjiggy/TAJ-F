@@ -37,7 +37,7 @@
 
 /* Logo Image */
 .logo-container img {
-  width: 150px; 
+  width: 300px; 
   height: auto; 
   max-width: 100%;
 }
@@ -45,12 +45,12 @@
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
   .logo-container img {
-    width: 125px; 
+    width: 225px; 
   }
 }
 
 @media screen and (max-width: 480px) {
   .logo-container img {
-    width: 100px; 
+    width: 200px; 
   }
 }
