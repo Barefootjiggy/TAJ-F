@@ -1,0 +1,81 @@
+/* Container settings */
+.testimonial-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Swiper settings to prevent cutoff */
+.swiper {
+  width: 100%;
+  height: auto !important;
+}
+
+/* Testimonial Slide Layout: Side-by-Side */
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left; /* Align text to the left */
+  padding: 20px;
+  gap: 20px; /* Space between image and text */
+}
+
+/* Image styles */
+.testimonial-image {
+  width: 120px; /* Adjust size */
+  height: 120px;
+  border-radius: 50%; /* Makes image circular */
+  object-fit: cover;
+  flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+/* Text container */
+.testimonial-text-container {
+  flex: 1; /* Takes remaining space */
+  max-width: 500px;
+}
+
+/* Ensure text does not cut off */
+.testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: visible;
+}
+
+/* Name styles */
+.testimonial-name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design - Stack for Mobile */
+@media (max-width: 768px) {
+  .testimonial-content {
+    flex-direction: column; /* Stack image above text on mobile */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px; /* Add space below image */
+  }
+
+  .testimonial-text-container {
+    max-width: 100%; /* Allow text to use full width */
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+}
