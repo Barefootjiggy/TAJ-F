@@ -10,7 +10,7 @@ const testimonials = [
   { 
     name: "Jon", 
     text: "Lost 50lbs working with Amanda virtually",
-    image: "/JonTest.png" // Update path to correct image location
+    image: "/JonTest.png" 
   },
   { 
     name: "Mattie Jo", 
@@ -23,9 +23,24 @@ const testimonials = [
     image: "/CassTest.jpeg"
   },
   { 
-    name: "Meghan", 
-    text: "Amanda got me through some super self-critical moments...",
-    image: "/images/meghan.jpg"
+    name: "Katie", 
+    text: "Thank you so much for being so passionate about what you do and being real!! I love your whole approach to this lifestyle…And the mindset aspect of the whole thing was priceless I’m very thankful for that!!!",
+    image: "/KatieTest.png" 
+  },
+  { 
+    name: "Dana", 
+    text: "I think the most important thing I learned from this program is not to judge myself and to be kinder to myself in every way… I feel great! Physically I am down a little over 10lbs but that wasn’t my main goal! I feel healthier and in a better place to tackle life long goals",
+    image: "/DanaTest.png"
+  },
+  { 
+    name: "Kayla", 
+    text: "It was something that just became a part of my routine. I did it for me. And I’m dang proud.",
+    image: "/KaylaTest.png"
+  },
+  { 
+    name: "Jordan", 
+    text: "A year ago I fell into some really bad habits and they’ve been so hard to break. Thanks to this program I’ve been able to realize what should and shouldn’t be going into my body.",
+    image: "/JordanTest.png"
   },
 ];
 
