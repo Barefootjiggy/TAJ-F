@@ -25,9 +25,9 @@
 
 /* Image styles */
 .testimonial-image {
-  width: 120px; /* Adjust size */
-  height: 120px;
-  border-radius: 50%; /* Makes image circular */
+  width: 300px; /* Adjust size */
+  height: 300px;
+  border-radius: 5%; /* Makes image circular */
   object-fit: cover;
   flex-shrink: 0; /* Prevents image from shrinking */
 }
@@ -62,8 +62,8 @@
   }
 
   .testimonial-image {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 10px; /* Add space below image */
   }
 

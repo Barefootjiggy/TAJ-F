@@ -10,17 +10,17 @@ const testimonials = [
   { 
     name: "Jon", 
     text: "Lost 50lbs working with Amanda virtually",
-    image: "/images/jon.jpg" // Update path to correct image location
+    image: "/JonTest.png" // Update path to correct image location
   },
   { 
     name: "Mattie Jo", 
     text: "Working with Amanda is great because I always know she has my holistic health at heart...",
-    image: "/images/mattie.jpg"
+    image: "/MJCTest.png"
   },
   { 
     name: "Cassondra", 
     text: "(My success) is 100% credit to her program + guidance",
-    image: "/images/cassondra.jpg"
+    image: "/CassTest.jpeg"
   },
   { 
     name: "Meghan", 
