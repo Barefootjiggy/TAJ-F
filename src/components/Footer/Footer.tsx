@@ -7,7 +7,7 @@ import './Footer.css';
 
 const Footer: React.FC = () => {
   const location = useLocation();
-  const apiBase = import.meta.env.VITE_API_BASE;
+  const apiBase = process.env.REACT_APP_API_BASE;
   const [isWaving, setIsWaving] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
