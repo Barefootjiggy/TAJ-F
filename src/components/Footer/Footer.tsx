@@ -44,27 +44,46 @@ const Footer: React.FC = () => {
     }, 2000);
   };
 
-  const handleSubscribeSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubscribeSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // Email validation regex pattern
+  
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
+  
     if (!emailRegex.test(email)) {
       setEmailError("Please enter a valid email address.");
       return;
     }
-
-    setEmailError(""); // Clear error if valid
-    
   
-    const cheerAudio = new Audio(process.env.PUBLIC_URL + '/Cheering.wav');
-    cheerAudio.play();
+    setEmailError("");
   
-    setIsSubscribed(true);
+    try {
+      const response = await fetch("http://localhost:5000/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email_address: email }),
+      });
   
-    setTimeout(() => setIsSubscribed(false), 3000);
-  };
+      const data = await response.json();
+  
+      if (response.status === 200) {
+        setIsSubscribed(true);
+        setTimeout(() => setIsSubscribed(false), 3000);
+        setEmail("");
+  
+        const cheerAudio = new Audio(process.env.PUBLIC_URL + "/Cheering.wav");
+        cheerAudio.play();
+      } else if (response.status === 409) {
+        setEmailError(data.message); // "You're already subscribed!"
+      } else {
+        setEmailError(data.message || "Subscription failed.");
+      }
+    } catch (error) {
+      console.error("Error subscribing:", error);
+      setEmailError("Server error. Please try again later.");
+    }
+  };  
 
   return (
     <>
