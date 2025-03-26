@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
   
     try {
-      const response = await fetch(`${apiBase}/subscribe`, {
+      const response = await fetch(`${apiBase}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
     setEmailError("");
   
     try {
-      const response = await fetch(`${apiBase}/contact`, {
+      const response = await fetch(`${apiBase}/subscribe`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
