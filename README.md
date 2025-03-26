@@ -1,46 +1,94 @@
-# Getting Started with Create React App
+# Train With Amanda Jane – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend for [Train With Amanda Jane](https://trainwithamandajane.com), a modern and interactive website built for a personal fitness coach. It helps users:
 
-## Available Scripts
+- Learn about Amanda’s services
+- Subscribe to her newsletter (Mailchimp)
+- Contact her directly through a custom form (emails via Nodemailer)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ⚙️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React** (with **TypeScript**)
+- **React Router DOM** – client-side routing
+- **Materialize CSS** – lightweight UI framework
+- **Framer Motion** – animations
+- **Font Awesome** – social and brand icons
+- **Canvas Confetti** – fun form animation
+- **Typewriter Effect** – animated headers
+- **Swiper.js** – carousel/sliders
+- **Netlify** – deployment platform
+- Connected to a Node.js/Express backend (hosted on Heroku)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+🧪 Development
+bash
+npm start
+Runs at: http://localhost:3000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/yourusername/trainwithamandajane-frontend.git
+cd trainwithamandajane-frontend
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🌐 Live Site
+Hosted on Netlify:
+➡️ https://trainwithamandajane.com
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🔌 API Integration
+This frontend integrates with a custom backend API:
 
-### `npm run eject`
+Newsletter Signup (POST /subscribe)
+Submits email to Mailchimp list
+Contact Form (POST /contact)
+Sends a message to info@trainwithamandajane.com
+The backend is hosted on Heroku and uses environment variables to control the API base URL.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+🔌 Backend Integration
+This frontend connects to a backend (hosted on Heroku) for:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📩 POST /subscribe
+Submits email address to Mailchimp.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+📨 POST /contact
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+🧩 File Structure Overview
+bash
+Copy
+Edit
+src/
+  components/
+    Footer.tsx        # Includes subscription + contact form
+    NavBar.tsx
+    TypeWriter.tsx
+    ...
+  pages/
+    Home/
+    About/
+  App.tsx
+  index.tsx
 
-## Learn More
+  💅 Features
+Clean & modern design
+Fully responsive
+Modal contact form with sound & confetti
+Smooth scrolling & animated sections
+Social media links (Instagram, TikTok, YouTube)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🧩 Notable Dependencies
+Package	Use Case
+materialize-css	Styling & layout
+framer-motion	Smooth animations
+canvas-confetti	Confetti after form submissions
+swiper	Carousel/testimonial slider
+typewriter-effect	Animated text headlines
+@fortawesome packages	Icons for social links
+react-router-dom	Navigation between pages
+typescript	Strong typing & dev safety
 
-To learn React, check out the [React documentation](https://reactjs.org/).

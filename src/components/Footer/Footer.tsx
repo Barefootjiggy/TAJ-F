@@ -10,8 +10,8 @@ const Footer: React.FC = () => {
   const [isWaving, setIsWaving] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [email, setEmail] = useState(""); // Track user email input
-  const [emailError, setEmailError] = useState(""); // Track validation error
+  const [email, setEmail] = useState(""); 
+  const [emailError, setEmailError] = useState(""); 
   const popperAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleButtonClick = () => {
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
         const cheerAudio = new Audio(process.env.PUBLIC_URL + "/Cheering.wav");
         cheerAudio.play();
       } else if (response.status === 409) {
-        setEmailError(data.message); // "You're already subscribed!"
+        setEmailError(data.message); 
       } else {
         setEmailError(data.message || "Subscription failed.");
       }
@@ -128,14 +128,13 @@ const Footer: React.FC = () => {
                 name="EMAIL" 
                 placeholder="Email Address" 
                 className="subscribe-input"
-                value={email} // Link state to input field
-                onChange={(e) => setEmail(e.target.value)} // Update state on input change
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
                 required 
               />
               <button type="submit" className="subscribe-button">SIGN UP</button>
             </form>
 
-            {/* Show validation error if email is invalid */}
             {emailError && <p className="error-message">{emailError}</p>}
 
             {isSubscribed && (

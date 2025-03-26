@@ -5,8 +5,8 @@ import "./Home.css";
 const Home: React.FC = () => {
   useEffect(() => {
     window.scrollTo({
-      top: 15, // Scroll to the absolute top
-      behavior: "auto" // Instant scroll to prevent delay
+      top: 15, 
+      behavior: "auto" 
     });
   }, []);
   
@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     <>
     <div className="hero-section">
         <div className="typewriter-container">
-          <TypeWriter /> {/* Typewriter effect positioned above hero content */}
+          <TypeWriter /> 
         </div>
       </div>
       <div className="container">

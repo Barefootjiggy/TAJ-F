@@ -60,10 +60,8 @@ const TestimonialCarousel = () => {
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index} className="testimonial-slide">
             <div className="testimonial-content">
-              {/* Left Side - Image */}
               <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
               
-              {/* Right Side - Text */}
               <div className="testimonial-text-container">
                 <p className="testimonial-text">"{testimonial.text}"</p>
                 <h3 className="testimonial-name">- {testimonial.name}</h3>
