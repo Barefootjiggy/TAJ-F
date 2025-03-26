@@ -1,5 +1,5 @@
 interface ImportMetaEnv {
-    readonly VITE_API_BASE: string;
+    readonly REACT_APP_API_BASE: string;
   }
   
   interface ImportMeta {
