@@ -7,6 +7,7 @@ import './Footer.css';
 
 const Footer: React.FC = () => {
   const location = useLocation();
+  const apiBase = import.meta.env.VITE_API_BASE;
   const [isWaving, setIsWaving] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -36,7 +37,7 @@ const Footer: React.FC = () => {
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
   
     try {
-      const response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch(`${apiBase}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
@@ -77,7 +78,7 @@ const Footer: React.FC = () => {
     setEmailError("");
   
     try {
-      const response = await fetch("http://localhost:5000/subscribe", {
+      const response = await fetch(`${apiBase}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
