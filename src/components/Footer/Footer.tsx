@@ -27,22 +27,42 @@ const Footer: React.FC = () => {
     setShowModal(false);
   };
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); 
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
   
-    const audio = new Audio(process.env.PUBLIC_URL + '/PartyPopper.wav'); 
-    audio.play();
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
   
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-    });
+    try {
+      const response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
   
-    setTimeout(() => {
-      setShowModal(false);
-    }, 2000);
-  };
+      const data = await response.json();
+  
+      if (response.ok) {
+        const audio = new Audio(process.env.PUBLIC_URL + "/PartyPopper.wav");
+        audio.play();
+  
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
+  
+        setTimeout(() => setShowModal(false), 2000);
+      } else {
+        alert(data.message || "Something went wrong.");
+      }
+    } catch (err) {
+      console.error("Error submitting contact form:", err);
+      alert("Failed to send message. Please try again later.");
+    }
+  };  
 
   const handleSubscribeSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
