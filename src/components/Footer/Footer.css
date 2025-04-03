@@ -149,6 +149,12 @@
   animation: wave 1s ease-in-out;
 }
 
+.modal-title {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  font-size: 24px; 
+  font-weight: bold; 
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -190,14 +196,13 @@
   color: #FDF0F0;  
 }
 
-/* Close Button */
 .modal-close {
   position: absolute;
   top: 10px;
   right: 15px;
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 40px;
   cursor: pointer;
 }
 
@@ -208,6 +213,19 @@
   margin-bottom: 10px;
   border: 1px solid #000000;
   border-radius: 3px;
+  color: #FDF0F0; 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+  opacity: 1; 
+  transition: background-color 1.5s ease;
+  color: #132043; 
+
+}
+
+.modal-form input:focus,
+.modal-form input:not(:placeholder-shown),
+.modal-form textarea:focus,
+.modal-form textarea:not(:placeholder-shown) {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .modal-form textarea {
