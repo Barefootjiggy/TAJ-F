@@ -9,7 +9,7 @@ import './TestimonialCarousel.css';
 const testimonials = [
   { 
     name: "Jon", 
-    text: "Lost 50lbs working with Amanda virtually",
+    text: "I think I look good in clothing and thank you for that. All of this possible because of you",
     image: "/JonTest.png" 
   },
   { 
