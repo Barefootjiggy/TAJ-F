@@ -23,9 +23,6 @@ const Home: React.FC = () => {
         <p className="description">
         At ForeverFitness, I help busy professionals break free from the cycle of yo-yo dieting and exercise burnout with science-backed, efficient workouts and sustainable nutrition strategies.
         </p>
-        <p className="description">
-          All professional athletes train their off-season in the gym to optimize their performance on the field. We should too!
-        </p>
       </div>
       </>
   );
