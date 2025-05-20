@@ -1,2 +1,27 @@
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure each Section has consistent spacing */
+.section {
+  padding: 60px 20px;
+}
+
+/* Optional: Add background fallback for contrast between sections */
+.section:nth-of-type(even) {
+  background-color: #fdf0f0;
+}
+
+.section:nth-of-type(odd) {
+  background-color: #ffffff;
+}
 
   

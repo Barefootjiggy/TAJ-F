@@ -1,9 +1,11 @@
-import React from 'react';
-import TestimonialCarousel from '../../components/TestimonialCarousel/TestimonialCarousel'
+import React, { lazy, Suspense } from 'react';
+const TestimonialCarousel = lazy(() => import('../../components/TestimonialCarousel/TestimonialCarousel'));
 
 const Testimonials: React.FC = () => {
   return (
-      <TestimonialCarousel />   
+    <Suspense fallback={<div>Loading testimonials...</div>}>
+      <TestimonialCarousel />
+    </Suspense>
   );
 };
 

@@ -10,30 +10,35 @@ const Typewriter = () => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const typingSpeed = isDeleting ? 40 : 80;
-  const delay = isDeleting ? 500 : 1000;
 
-useEffect(() => {
-  const handleTyping = () => {
-    setText((prevText) =>
-      isDeleting
-        ? slogans[index].substring(0, prevText.length - 1)
-        : slogans[index].substring(0, prevText.length + 1)
-    );
+  useEffect(() => {
+    const typingSpeed = isDeleting ? 40 : 80;
+    const delay = isDeleting ? 500 : 1000;
 
-    if (!isDeleting && text === slogans[index]) {
-      setTimeout(() => setIsDeleting(true), delay);
-    } else if (isDeleting && text === "") {
-      setIsDeleting(false);
-      setIndex((prevIndex) => (prevIndex + 1) % slogans.length);
-    }
-  };
+    const handleTyping = () => {
+      setText((prevText) =>
+        isDeleting
+          ? slogans[index].substring(0, prevText.length - 1)
+          : slogans[index].substring(0, prevText.length + 1)
+      );
 
-  const timer = setTimeout(handleTyping, typingSpeed);
-  return () => clearTimeout(timer);
-}, [text, isDeleting, index, delay, typingSpeed]);
+      if (!isDeleting && text === slogans[index]) {
+        setTimeout(() => setIsDeleting(true), delay);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setIndex((prevIndex) => (prevIndex + 1) % slogans.length);
+      }
+    };
 
-  return <p className="typewriter">{text}</p>;
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, index]);
+
+  return (
+    <p className="typewriter">
+      <span aria-live="polite">{text}</span>
+    </p>
+  );
 };
 
 export default Typewriter;

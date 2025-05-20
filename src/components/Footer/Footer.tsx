@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import confetti from 'canvas-confetti';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
+import { faTiktok } from '@fortawesome/free-brands-svg-icons/faTiktok';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 import './Footer.css';
 
 const Footer: React.FC = () => {
@@ -48,7 +49,8 @@ const Footer: React.FC = () => {
       if (response.ok) {
         const audio = new Audio(process.env.PUBLIC_URL + "/PartyPopper.wav");
         audio.play();
-  
+        
+        const confetti = (await import('canvas-confetti')).default;
         confetti({
           particleCount: 100,
           spread: 70,
