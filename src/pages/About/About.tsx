@@ -46,6 +46,7 @@ const About: React.FC = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="consult-link"
+            aria-label="Schedule a Free Consult, opens in a new tab"
           >
             Schedule a Free Consult
           </a> 

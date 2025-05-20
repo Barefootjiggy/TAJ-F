@@ -146,19 +146,19 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="social-icons">
-            <a href="https://www.instagram.com/trainwithamandajane/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} className="icon" />
+            <a href="https://www.instagram.com/trainwithamandajane/" target="_blank" rel="noopener noreferrer" aria-label='Instagram'>
+              <FontAwesomeIcon icon={faInstagram} className="icon" aria-hidden="true" />
             </a>
-            <a href="https://www.tiktok.com/@trainwithamandajane" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTiktok} className="icon" />
+            <a href="https://www.tiktok.com/@trainwithamandajane" target="_blank" rel="noopener noreferrer" aria-label='TikTok'>
+              <FontAwesomeIcon icon={faTiktok} className="icon" aria-hidden="true" />
             </a>
-            <a href="https://www.youtube.com/@trainwithamandajane" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faYoutube} className="icon" />
+            <a href="https://www.youtube.com/@trainwithamandajane" target="_blank" rel="noopener noreferrer" aria-label='Youtube'>
+              <FontAwesomeIcon icon={faYoutube} className="icon" aria-hidden="true" />
             </a>
           </div>
 
           <h2 className="footer-brand">
-            <a href="http://onelink.to/broadwayeverybody" target="_blank" rel="noopener noreferrer">
+            <a href="http://onelink.to/broadwayeverybody" target="_blank" rel="noopener noreferrer" aria-label="Download the Forever Fitness app" >
               FOREVER FITNESS
             </a>
           </h2>
