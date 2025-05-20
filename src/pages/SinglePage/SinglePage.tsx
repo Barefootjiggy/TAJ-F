@@ -5,7 +5,6 @@ import Section from "../../components/FadeSection/FadeSection";
 import Footer from "../../components/Footer/Footer"
 
 import "./SinglePage.css";
-import Testimonials from '../Testimonials.tsx/Testimonials'
 
 // Lazy load Testimonials
 const Testimonials = lazy(() => import('../Testimonials.tsx/Testimonials'));
