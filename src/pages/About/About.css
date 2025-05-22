@@ -1,4 +1,6 @@
 .about-container {
+  position: relative;
+  z-index: 2;
   background: linear-gradient(to right, #fdf0f0, #f1b4bb);
   border-radius: 10px;
   display: flex;

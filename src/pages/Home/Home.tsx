@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
 import TypeWriter from "../../components/TypeWriter/TypeWriter";
 import "./Home.css";
+import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 15, behavior: "auto" });
-  }, []);
 
   return (
     <>
@@ -24,13 +21,21 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <div className="container">
-        <h1 className="title">Forever Fitness</h1>
-        <h2 className="subtitle">Small Steps, Big Changes, Your Future Self Will Thank You!</h2>
-        <p className="description">
-          At ForeverFitness, I help busy professionals break free from the cycle of yo-yo dieting and exercise burnout with science-backed, efficient workouts and sustainable nutrition strategies.
-        </p>
-      </div>
+      <main>
+  <motion.div
+    className="container"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.2, delay: 0.3, ease: 'easeOut' }}
+    viewport={{ once: true, amount: 0.3 }}
+  >
+    <h1 className="title">Forever Fitness</h1>
+    <h2 className="subtitle">Small Steps, Big Changes, Your Future Self Will Thank You!</h2>
+    <p className="description">
+      At ForeverFitness, I help busy professionals break free from the cycle of yo-yo dieting and exercise burnout with science-backed, efficient workouts and sustainable nutrition strategies.
+    </p>
+  </motion.div>
+</main>
     </>
   );
 };

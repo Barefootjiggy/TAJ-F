@@ -2,6 +2,7 @@
 .hero-section {
   position: relative;
   height: 100vh;
+  min-height: 600px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -17,7 +18,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
 }
 
 .hero-section::after {
@@ -28,13 +28,11 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%);
-  z-index: 2;
 }
 
 /* TYPEWRITER SECTION */
 .typewriter-container {
   position: relative;
-  z-index: 3;
   text-align: center;
   top: 20vh;
   width: 100%;
@@ -56,6 +54,10 @@
 @media screen and (max-width: 768px) {
   .typewriter {
     font-size: 1.5rem;
+  }
+
+  .hero-section {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   }
 }
 

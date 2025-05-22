@@ -1,4 +1,6 @@
 .footer-wrapper {
+  position: relative;
+  z-index: 2; 
   background-color: #FDF0F0;
   padding: 40px 20px;
   display: flex;

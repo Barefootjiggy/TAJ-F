@@ -1,11 +1,11 @@
 import React from "react";
-import NavBar from "../src/components/NavBar/NavBar";
+import LogoBanner from "./components/LogoBanner/LogoBanner";
 import SinglePage from "../src/pages/SinglePage/SinglePage";
 
 const App: React.FC = () => {
   return (
     <>
-      <NavBar />
+      <LogoBanner />
       <SinglePage />
     </>
   );

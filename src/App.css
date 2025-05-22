@@ -1,1 +1,71 @@
+/* === Fonts === */
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.typewriter {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px; 
+  text-transform: uppercase; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* === Color Variables === */
+:root {
+  --primary-color: #132043; 
+  --secondary-color: #1F4172;
+  --accent-color: #F1B4BB;
+  --background-color: #FDF0F0; 
+  --text-color: #132043; 
+}
+
+/* === General Styling === */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.nav-wrapper {
+  background-color: var(--primary-color);
+}
+
+.brand-logo {
+  color: var(--background-color) !important;
+}
+
+.nav-wrapper ul li a {
+  color: var(--background-color) !important;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+.hero {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 50px;
+  text-align: center;
+}
+
+.hero h1,
+.hero p {
+  color: var(--background-color);
+}
+
+.hero .btn {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
 

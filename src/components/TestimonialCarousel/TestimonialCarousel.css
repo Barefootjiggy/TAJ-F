@@ -1,4 +1,47 @@
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  gap: 20px;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.embla__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.embla__button {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.embla__button:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+}
+
+.embla__button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
 .testimonial-container {
+  position: relative;
+  z-index: 2;
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
@@ -6,9 +49,13 @@
   overflow: hidden;
 }
 
-.swiper {
-  width: 100%;
-  height: auto !important;
+.testimonial-title {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff; /* or #fdf0f0, matching your section */
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 8px;
 }
 
 .testimonial-content {
@@ -34,17 +81,30 @@
 }
 
 .testimonial-text {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff; /* or #fdf0f0 to match the section */
+  padding: 10px 16px;
+  border-radius: 8px;
   font-size: 1.2rem;
   font-style: italic;
   word-wrap: break-word;
   white-space: normal;
   overflow: visible;
+  display: inline-block;
+
 }
 
 .testimonial-name {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff; /* or #fdf0f0 */
+  padding: 6px 12px;
+  border-radius: 6px;
   margin-top: 10px;
   font-weight: bold;
   font-size: 1.2rem;
+  display: inline-block;
 }
 
 @media (max-width: 768px) {

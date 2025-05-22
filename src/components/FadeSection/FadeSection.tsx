@@ -1,18 +1,40 @@
-import { motion } from "framer-motion";
+import React, { forwardRef } from 'react';
+import { motion } from 'framer-motion';
 
-const Section = ({ id, children }: { id: string; children: React.ReactNode }) => {
+interface SectionProps {
+  id: string;
+  children: React.ReactNode;
+}
+
+// Define animation variants
+const fadeInVariant = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const Section = forwardRef<HTMLElement, SectionProps>(({ id, children }, ref) => {
   return (
     <motion.section
       id={id}
+      ref={ref}
       className="section"
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.2, delay: 0.2, ease: "anticipate" }}
-      viewport={{ once: true }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInVariant}
     >
       {children}
     </motion.section>
   );
-};
+});
+
+Section.displayName = 'Section';
 
 export default Section;

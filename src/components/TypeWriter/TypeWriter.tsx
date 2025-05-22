@@ -12,26 +12,27 @@ const Typewriter = () => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const typingSpeed = isDeleting ? 40 : 80;
-    const delay = isDeleting ? 500 : 1000;
+    let timeout: ReturnType<typeof setTimeout>;
+    const fullText = slogans[index];
 
-    const handleTyping = () => {
-      setText((prevText) =>
-        isDeleting
-          ? slogans[index].substring(0, prevText.length - 1)
-          : slogans[index].substring(0, prevText.length + 1)
-      );
+    if (!isDeleting && text === fullText) {
+      // Finished typing, wait before deleting
+      timeout = setTimeout(() => setIsDeleting(true), 1000);
+    } else if (isDeleting && text === "") {
+      // Finished deleting, move to next
+      setIsDeleting(false);
+      setIndex((prev) => (prev + 1) % slogans.length);
+    } else {
+      timeout = setTimeout(() => {
+        setText((prev) =>
+          isDeleting
+            ? fullText.substring(0, prev.length - 1)
+            : fullText.substring(0, prev.length + 1)
+        );
+      }, isDeleting ? 40 : 80);
+    }
 
-      if (!isDeleting && text === slogans[index]) {
-        setTimeout(() => setIsDeleting(true), delay);
-      } else if (isDeleting && text === "") {
-        setIsDeleting(false);
-        setIndex((prevIndex) => (prevIndex + 1) % slogans.length);
-      }
-    };
-
-    const timer = setTimeout(handleTyping, typingSpeed);
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timeout);
   }, [text, isDeleting, index]);
 
   return (

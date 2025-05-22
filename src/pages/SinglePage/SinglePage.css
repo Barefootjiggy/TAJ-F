@@ -13,6 +13,7 @@ html {
 /* Ensure each Section has consistent spacing */
 .section {
   padding: 60px 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Optional: Add background fallback for contrast between sections */
@@ -24,4 +25,8 @@ html {
   background-color: #ffffff;
 }
 
-  
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 16px;
+  }
+}

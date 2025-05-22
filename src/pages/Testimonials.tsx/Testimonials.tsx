@@ -3,7 +3,9 @@ const TestimonialCarousel = lazy(() => import('../../components/TestimonialCarou
 
 const Testimonials: React.FC = () => {
   return (
-    <Suspense fallback={<div>Loading testimonials...</div>}>
+    <Suspense fallback={<div>
+      Loading testimonials...
+      </div>}>
       <TestimonialCarousel />
     </Suspense>
   );

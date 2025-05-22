@@ -65,7 +65,7 @@ Edit
 src/
   components/
     Footer.tsx        # Includes subscription + contact form
-    NavBar.tsx
+    LogoBanner.tsx
     TypeWriter.tsx
     ...
   pages/
