@@ -2,7 +2,7 @@ import "./LogoBanner.css";
 
 const LogoBanner = () => {
   return (
-    <nav className="logobanner-wrapper" role="banner">
+    <header className="logobanner-wrapper" role="banner">
       <div className="logo-container">
         <img 
         src="/ForeverFit05.webp" 
@@ -12,7 +12,7 @@ const LogoBanner = () => {
         className="logo-img" 
         />
       </div>
-    </nav>
+    </header>
   );
 };
 

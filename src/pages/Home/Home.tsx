@@ -1,18 +1,28 @@
 import TypeWriter from "../../components/TypeWriter/TypeWriter";
 import "./Home.css";
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 const Home: React.FC = () => {
+  const heroImgRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    if (heroImgRef.current) {
+      heroImgRef.current.setAttribute('fetchpriority', 'high');
+    }
+  }, []);
 
   return (
     <>
-      <section className="hero-section" aria-label="Hero banner with call to action">
+      <section className="hero-section" aria-label="Hero banner">
         <h1 className="visually-hidden">Forever Fitness – Online Training with Amanda Jane</h1>
         <img 
+          ref={heroImgRef}
           src="/AmandaPushuplook.webp" 
           alt="Amanda Jane doing a pushup" 
           className="hero-background"
-          fetchPriority="high"
+          loading="eager"
+          decoding="async"
           width="1920"
           height="1080"
         />
