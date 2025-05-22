@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         <h1 className="visually-hidden">Forever Fitness – Online Training with Amanda Jane</h1>
         <img 
           ref={heroImgRef}
-          src="/AmandaPushuplook.webp" 
+          src="/images/AmandaPushuplook.webp" 
           alt="Amanda Jane doing a pushup" 
           className="hero-background"
           loading="eager"

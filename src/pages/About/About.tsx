@@ -5,7 +5,7 @@ const About: React.FC = () => {
   return (
     <div className="about-container">
       <div className="image-badge-container">
-        <img src="/AmandaSmiling.webp" alt="Amanda Jane, personal trainer, smiling" className="about-image"  loading='lazy' width='1200' height='800'/>
+        <img src="/images/AmandaSmiling.webp" alt="Amanda Jane, personal trainer, smiling" className="about-image"  loading='lazy' width='1200' height='800'/>
         <div className="badges-container">
           <span className="badge">M.S. Exercise Science & Nutrition</span>
           <span className="badge">NSCA Certified Strength & Conditioning Specialist</span>
