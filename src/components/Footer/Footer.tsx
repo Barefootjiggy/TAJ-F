@@ -170,7 +170,7 @@ const Footer: React.FC = () => {
       {showModal && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img src="/AmandaPose.webp" alt="Amanda posing" className="modal-bg" />
+            <img src="/images/AmandaPose.webp" alt="Amanda posing" className="modal-bg" />
             <div className="modal-inner">
               <button className="modal-close" onClick={closeModal}>&times;</button>
               <h4 className="modal-title">Let's Chat About Your Goals!</h4>
