@@ -8,6 +8,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 70%, 0 100%);
+  margin-top: 60px;
 }
 
 /* Replaces CSS background with semantic <img> */
