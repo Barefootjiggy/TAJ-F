@@ -1,13 +1,12 @@
 import React, {lazy, Suspense, useState} from "react";
 import Home from "../Home/Home";
-import About from "../About/About";
 import Section from "../../components/FadeSection/FadeSection";
-import Footer from "../../components/Footer/Footer"
 import { useInView } from "react-intersection-observer";
 
 import "./SinglePage.css";
 
-// Lazy load Testimonials
+const About = lazy(() => import("../About/About"));
+const Footer = lazy(() => import("../../components/Footer/Footer"));
 const Testimonials = lazy(() => import('../Testimonials.tsx/Testimonials'));
 
 const SinglePage: React.FC = () => {
@@ -29,8 +28,10 @@ const SinglePage: React.FC = () => {
         <Home />
       </Section>
       <Section id="about">
-        <About />
-      </Section>
+  <Suspense fallback={null}>
+    <About />
+  </Suspense>
+</Section>
       <Section id="testimonials" ref={testimonialRef}>
   {shouldLoadTestimonials && (
     <Suspense fallback={null}>
@@ -39,8 +40,10 @@ const SinglePage: React.FC = () => {
   )}
 </Section>
       <Section id="footer">
-      <Footer />
-      </Section>
+  <Suspense fallback={null}>
+    <Footer />
+  </Suspense>
+</Section>
     </div>
   );
 };
