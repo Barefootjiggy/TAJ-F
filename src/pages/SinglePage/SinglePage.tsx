@@ -1,4 +1,4 @@
-import React, {lazy, Suspense, useState} from "react";
+import React, {lazy, Suspense, useState, useEffect} from "react";
 import Home from "../Home/Home";
 import Section from "../../components/FadeSection/FadeSection";
 import { useInView } from "react-intersection-observer";
@@ -17,10 +17,12 @@ const SinglePage: React.FC = () => {
     triggerOnce: true,
   });
 
-  // Once in view, mark to load
-  if (inView && !shouldLoadTestimonials) {
+  useEffect(() => {
+  if (inView) {
     setShouldLoadTestimonials(true);
   }
+}, [inView]);
+
 
   return (
     <div>
