@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { motion } from 'framer-motion';
 import './TestimonialCarousel.css';
 
 const testimonials = [
@@ -35,15 +34,8 @@ const TestimonialCarousel = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <motion.div
-      className="testimonial-container"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.2, delay: 0.2, ease: 'easeOut' }}
-      viewport={{ once: true, amount: 0.3 }}
-    >
+    <div className="container fade-in">
       <h2 className="testimonial-title">What Clients Are Saying</h2>
-
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
           {testimonials.map((testimonial, index) => (
@@ -81,7 +73,7 @@ const TestimonialCarousel = () => {
           ›
         </button>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

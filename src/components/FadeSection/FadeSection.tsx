@@ -1,37 +1,47 @@
-import React, { forwardRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { forwardRef, useRef, useState, useEffect } from 'react';
 
 interface SectionProps {
   id: string;
   children: React.ReactNode;
 }
 
-// Define animation variants
-const fadeInVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: 'easeOut',
-    },
-  },
-};
-
 const Section = forwardRef<HTMLElement, SectionProps>(({ id, children }, ref) => {
+  const localRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(id === 'home'); // Make hero section visible immediately
+
+  useEffect(() => {
+    if (id === 'home') return;
+
+    const element = (ref as React.RefObject<HTMLElement>)?.current || localRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(element);
+    return () => observer.unobserve(element);
+  }, [ref, id]);
+
+  const sectionClass = `section${id !== 'home' && isVisible ? ' fade-in-section' : ''}`;
+
   return (
-    <motion.section
+    <section
       id={id}
-      ref={ref}
-      className="section"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={fadeInVariant}
+      ref={(node) => {
+        localRef.current = node;
+        if (typeof ref === 'function') ref(node);
+        else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
+      }}
+      className={sectionClass}
     >
       {children}
-    </motion.section>
+    </section>
   );
 });
 

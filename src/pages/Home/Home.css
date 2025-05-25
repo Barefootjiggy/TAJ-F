@@ -1,3 +1,7 @@
+.logo-spacer {
+  height: 100px;
+}
+
 /* HERO SECTION */
 .hero-section {
   display: flex;
@@ -8,7 +12,6 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 70%, 0 100%);
-  margin-top: 60px;
 }
 
 /* Replaces CSS background with semantic <img> */
@@ -50,6 +53,45 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
+}
+
+
+/* CONTAINER SECTION */
+.container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
 
 /* Updated Responsive Tweaks */
@@ -98,41 +140,18 @@
   }
 }
 
-
-/* CONTAINER SECTION */
-.container {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 3;
-  background: rgba(255, 255, 255, 0.6);
-  padding: 20px;
-  border-radius: 10px;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.title {
-  font-size: 3em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.subtitle {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.description {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.3s forwards;
 }

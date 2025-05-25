@@ -10,23 +10,3 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Ensure each Section has consistent spacing */
-.section {
-  padding: 60px 20px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* Optional: Add background fallback for contrast between sections */
-.section:nth-of-type(even) {
-  background-color: #fdf0f0;
-}
-
-.section:nth-of-type(odd) {
-  background-color: #ffffff;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 40px 16px;
-  }
-}
