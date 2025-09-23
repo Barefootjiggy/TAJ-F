@@ -10,6 +10,7 @@ const testimonials = [
   { name: "Dana", text: "I think the most important thing I learned from this program is not to judge myself and to be kinder to myself in every way… I feel great! Physically I am down a little over 10lbs but that wasn’t my main goal! I feel healthier and in a better place to tackle life long goals.", image: "/images/DanaTest.webp" },
   { name: "Kayla", text: "It was something that just became a part of my routine. I did it for me. And I’m dang proud.", image: "/images/KaylaTest.webp" },
   { name: "Jordan", text: "Thanks to this program I’ve been able to realize what should and shouldn’t be going into my body.", image: "/images/JordanTest.webp" },
+  { name: "Jennifer", text: "This is the first time I've ever lost weight. I feel lighter, I'm jogging up and down stairs, I'm carrying heavy laundry. I'm strength training and I've changed my diet. I feel stronger.", image: "/images/JenniferTest.webp" },
 ];
 
 const TestimonialCarousel = () => {
